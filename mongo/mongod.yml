@@ -1,0 +1,4 @@
+storage:
+  dbPath: /var/lib/mongodb
+replication:
+  replSetName: paradigm-replset

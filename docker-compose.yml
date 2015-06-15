@@ -1,0 +1,16 @@
+mongo:
+  build: mongo
+  ports:
+    - "27017:27017"
+  volumes:
+    - /db:/var/lib/mongodb
+elasticsearch:
+  build: elasticsearch
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+mongoconnector:
+  build: mongo-connector
+  links:
+    - mongo
+    - elasticsearch
